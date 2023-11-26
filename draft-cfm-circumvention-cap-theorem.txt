@@ -85,17 +85,20 @@ Table of Contents
    2.  *available:* returns data at all; and
 
    3.  *partition-tolerant*: routes around failures, which by definition
-       include active censorship.
+       include active censorship.  In this case, they also include
+       active _attacks_ on circumvention infrastructure that lessen its
+       overall availability, whether or not intended as an act of
+       censorship.
 
-   D/DoS attacks against the Tor network diminish its overall
-   availability, which lessens its utility in circumventing other
-   censorship measures whether or not the attack itself is motivated by
-   or intended as an act of censorship.
+   For the workshop, I propose to explore further whether formalisms
+   such as the CAP theorem are useful models and/or measures for the
+   utility and resilience of a censorship-circumvention system such as
+   Tor.
 
 2.  Informative References
 
    [biasws]   Internet Architecture Board, "Workshop on Barriers to
-              Internet Access of Services", n.d..
+              Internet Access of Services", 20 September 2023.
 
    [cap-theorem]
               "CAP theorem", n.d.,
