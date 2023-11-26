@@ -16,12 +16,16 @@ Abstract
    This Internet-Draft is a submission to the IAB Workshop on Barriers
    to Internet Access of Services [biasws].
 
-Discussion Venues
+About This Document
 
    This note is to be removed before publishing as an RFC.
 
+   Status information for this document may be found at
+   https://datatracker.ietf.org/doc/draft-cfm-circumvention-cap-
+   theorem/.
+
    Source for this draft and an issue tracker can be found at
-   https://github.com/cfm/draft-cfm-circumvention-cap-theorem.
+   https://github.com/cfm/draft-cfm-circumvention-cap-thorem.
 
 Status of This Memo
 
@@ -49,10 +53,7 @@ Copyright Notice
    Provisions Relating to IETF Documents (https://trustee.ietf.org/
    license-info) in effect on the date of publication of this document.
    Please review these documents carefully, as they describe your rights
-   and restrictions with respect to this document.  Code Components
-   extracted from this document must include Revised BSD License text as
-   described in Section 4.e of the Trust Legal Provisions and are
-   provided without warranty as described in the Revised BSD License.
+   and restrictions with respect to this document.
 
 Table of Contents
 
@@ -98,7 +99,8 @@ Table of Contents
 2.  Informative References
 
    [biasws]   Internet Architecture Board, "Workshop on Barriers to
-              Internet Access of Services", 20 September 2023.
+              Internet Access of Services", 20 September 2023,
+              <https://datatracker.ietf.org/group/biasws/about/>.
 
    [cap-theorem]
               "CAP theorem", n.d.,
