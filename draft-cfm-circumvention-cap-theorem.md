@@ -3,11 +3,14 @@ title: Towards a CAP Theorem for Censorship Circumvention
 category: info
 
 docname: draft-cfm-circumvention-cap-theorem-latest
-submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
+submissiontype: independent
 number:
 date:
-consensus: true
 v: 3
+venue:
+  group: BIAS
+  type: Workshop
+  github: cfm/draft-cfm-circumvention-cap-thorem
 
 author:
  - fullname: Cory Myers
