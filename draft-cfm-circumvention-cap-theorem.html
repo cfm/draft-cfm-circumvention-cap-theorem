@@ -7,7 +7,8 @@
 <title>Towards a CAP Theorem for Censorship Circumvention</title>
 <meta content="Cory Myers" name="author">
 <meta content="
-       TK 
+       This Internet-Draft is a submission to the IAB Workshop on Barriers to Internet
+Access of Services  . 
     " name="description">
 <meta content="xml2rfc 3.18.2" name="generator">
 <meta content="draft-cfm-circumvention-cap-theorem-latest" name="ietf.draft">
@@ -1059,7 +1060,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">Towards a CAP Theorem for Censorship Circumvention</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">TK<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">This Internet-Draft is a submission to the IAB Workshop on Barriers to Internet
+Access of Services <span>[<a href="#biasws" class="cite xref">biasws</a>]</span>.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-discussion-venues">
@@ -1118,7 +1120,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         </h2>
 <nav class="toc"><ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1">
-            <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-executive-summary" class="internal xref">Executive summary</a></p>
+            <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-research-proposal" class="internal xref">Research proposal</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2">
             <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
@@ -1130,10 +1132,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </nav>
 </section>
 </div>
-<div id="executive-summary">
+<div id="research-proposal">
 <section id="section-1">
-      <h2 id="name-executive-summary">
-<a href="#section-1" class="section-number selfRef">1. </a><a href="#name-executive-summary" class="section-name selfRef">Executive summary</a>
+      <h2 id="name-research-proposal">
+<a href="#section-1" class="section-number selfRef">1. </a><a href="#name-research-proposal" class="section-name selfRef">Research proposal</a>
       </h2>
 <p id="section-1-1">Between June 2022 and April 2023 <span>[<a href="#tor-status" class="cite xref">tor-status</a>]</span>, the Tor network was the target
 of a sustained distributed denial-of-service (DDoS) attack, apparently targeting
@@ -1146,15 +1148,24 @@ performance of the Tor network by bypassing the "exit nodes" that interface with
 the clearnet Internet.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">Although the origins and motivations of this attack remain unknown, it is a
 useful case study in the D/DoS vulnerability of overlay networks such as Tor,
-which for different users may protect their anonymity, circumvent censorship, or
-both.  The CAP theorem is instructive: like a database, a
-censorship-circumvention system is useful to the extent that it is consistent
-(returns accurate and current data), available (returns data at all), and
-partition-tolerant (routes around failures---which by definition include active
-censorship).  D/DoS attacks against the Tor network diminish its overall
-availability, which lessens its utility in circumventing other censorship
-measures whether or not the attack itself is motivated by or intended as an act
-of censorship.<a href="#section-1-2" class="pilcrow">¶</a></p>
+which users may seek out to protect their anonymity, circumvent censorship, or
+both.  The CAP theorem <span>[<a href="#cap-theorem" class="cite xref">cap-theorem</a>]</span> is instructive: like a database, a
+censorship-circumvention system is useful to the extent that it is:<a href="#section-1-2" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="section-1-3">
+<li id="section-1-3.1">
+          <p id="section-1-3.1.1"><strong>consistent:</strong> returns accurate and current data;<a href="#section-1-3.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li id="section-1-3.2">
+          <p id="section-1-3.2.1"><strong>available:</strong> returns data at all; and<a href="#section-1-3.2.1" class="pilcrow">¶</a></p>
+</li>
+        <li id="section-1-3.3">
+          <p id="section-1-3.3.1"><strong>partition-tolerant</strong>: routes around failures, which by definition include
+active censorship.<a href="#section-1-3.3.1" class="pilcrow">¶</a></p>
+</li>
+      </ol>
+<p id="section-1-4">D/DoS attacks against the Tor network diminish its overall availability, which
+lessens its utility in circumventing other censorship measures whether or not
+the attack itself is motivated by or intended as an act of censorship.<a href="#section-1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-informative-references">
@@ -1163,6 +1174,14 @@ of censorship.<a href="#section-1-2" class="pilcrow">¶</a></p>
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
       </h2>
 <dl class="references">
+<dt id="biasws">[biasws]</dt>
+      <dd>
+<span class="refAuthor">Internet Architecture Board</span>, <span class="refTitle">"Workshop on Barriers to Internet Access of Services"</span>, <span>n.d.</span>. </dd>
+<dd class="break"></dd>
+<dt id="cap-theorem">[cap-theorem]</dt>
+      <dd>
+<span class="refTitle">"CAP theorem"</span>, <span>n.d.</span>, <span>&lt;<a href="https://en.wikipedia.org/wiki/CAP_theorem">https://en.wikipedia.org/wiki/CAP_theorem</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="tor-relays-2022-07">[tor-relays-2022-07]</dt>
       <dd>
 <span class="refAuthor">Dingledine, R.</span>, <span class="refTitle">"We're trying out guard-n-primary-guards-to-use=2"</span>, <time datetime="2022-07-06" class="refDate">6 July 2022</time>, <span>&lt;<a href="https://lists.torproject.org/pipermail/tor-relays/2022-July/020686.html">https://lists.torproject.org/pipermail/tor-relays/2022-July/020686.html</a>&gt;</span>. </dd>

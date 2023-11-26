@@ -13,7 +13,8 @@ Expires: 29 May 2024
 
 Abstract
 
-   TK
+   This Internet-Draft is a submission to the IAB Workshop on Barriers
+   to Internet Access of Services [biasws].
 
 Discussion Venues
 
@@ -55,11 +56,11 @@ Copyright Notice
 
 Table of Contents
 
-   1.  Executive summary
+   1.  Research proposal
    2.  Informative References
    Author's Address
 
-1.  Executive summary
+1.  Research proposal
 
    Between June 2022 and April 2023 [tor-status], the Tor network was
    the target of a sustained distributed denial-of-service (DDoS)
@@ -74,18 +75,31 @@ Table of Contents
 
    Although the origins and motivations of this attack remain unknown,
    it is a useful case study in the D/DoS vulnerability of overlay
-   networks such as Tor, which for different users may protect their
-   anonymity, circumvent censorship, or both.  The CAP theorem is
-   instructive: like a database, a censorship-circumvention system is
-   useful to the extent that it is consistent (returns accurate and
-   current data), available (returns data at all), and partition-
-   tolerant (routes around failures---which by definition include active
-   censorship).  D/DoS attacks against the Tor network diminish its
-   overall availability, which lessens its utility in circumventing
-   other censorship measures whether or not the attack itself is
-   motivated by or intended as an act of censorship.
+   networks such as Tor, which users may seek out to protect their
+   anonymity, circumvent censorship, or both.  The CAP theorem
+   [cap-theorem] is instructive: like a database, a censorship-
+   circumvention system is useful to the extent that it is:
+
+   1.  *consistent:* returns accurate and current data;
+
+   2.  *available:* returns data at all; and
+
+   3.  *partition-tolerant*: routes around failures, which by definition
+       include active censorship.
+
+   D/DoS attacks against the Tor network diminish its overall
+   availability, which lessens its utility in circumventing other
+   censorship measures whether or not the attack itself is motivated by
+   or intended as an act of censorship.
 
 2.  Informative References
+
+   [biasws]   Internet Architecture Board, "Workshop on Barriers to
+              Internet Access of Services", n.d..
+
+   [cap-theorem]
+              "CAP theorem", n.d.,
+              <https://en.wikipedia.org/wiki/CAP_theorem>.
 
    [tor-relays-2022-07]
               Dingledine, R., "We're trying out guard-n-primary-guards-
