@@ -7,7 +7,7 @@
 <title>Towards a CAP Theorem for Censorship Circumvention</title>
 <meta content="Cory Myers" name="author">
 <meta content="
-       TODO Abstract 
+       TK 
     " name="description">
 <meta content="xml2rfc 3.18.2" name="generator">
 <meta content="draft-cfm-circumvention-cap-theorem-latest" name="ietf.draft">
@@ -1023,7 +1023,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <table class="ears">
 <thead><tr>
 <td class="left">Internet-Draft</td>
-<td class="center">Towards a CAP Theorem for Censorship Cir</td>
+<td class="center">Circumvention CAP Theorem</td>
 <td class="right">November 2023</td>
 </tr></thead>
 <tfoot><tr>
@@ -1059,7 +1059,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">Towards a CAP Theorem for Censorship Circumvention</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">TODO Abstract<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">TK<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1110,92 +1110,68 @@ svg :is([fill="white"], [fill^="#fff"]) {
         </h2>
 <nav class="toc"><ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1">
-            <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-introduction" class="internal xref">Introduction</a></p>
+            <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-test" class="internal xref">Test</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2">
-            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-conventions-and-definitions" class="internal xref">Conventions and Definitions</a></p>
+            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
-</li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
-            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
-</li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
-            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
-</li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
-            <p id="section-toc.1-1.6.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
-</li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
-            <p id="section-toc.1-1.7.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
+            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
 </li>
         </ul>
 </nav>
 </section>
 </div>
-<div id="introduction">
+<div id="test">
 <section id="section-1">
-      <h2 id="name-introduction">
-<a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
+      <h2 id="name-test">
+<a href="#section-1" class="section-number selfRef">1. </a><a href="#name-test" class="section-name selfRef">Test</a>
       </h2>
-<p id="section-1-1">TODO Introduction<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-1">Between June 2022 and April 2023 <span>[<a href="#tor-status" class="cite xref">tor-status</a>]</span>, the Tor network was the target
+of a sustained distributed denial-of-service (DDoS) attack, apparently targeting
+the relays and directory servers that coordinate introductions to Tor hidden
+services <span>[<a href="#tor-relays-2022-07" class="cite xref">tor-relays-2022-07</a>]</span> <span>[<a href="#tor-relays-2022-10" class="cite xref">tor-relays-2022-10</a>]</span>.  This attack impeded the
+performance and threatened the security of the Tor network for all users.  It
+especially obstructed Web sites and services that had gone out of their way to
+be accessible to Tor users via Tor hidden services, which usually improve the
+performance of the Tor network by bypassing the "exit nodes" that interface with
+the clearnet Internet.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">Although the origins and motivations of this attack remain unknown, it is a
+useful case study in the D/DoS vulnerability of overlay networks such as Tor,
+which for different users may protect their anonymity, circumvent censorship, or
+both.  The CAP theorem is instructive: like a database, a
+censorship-circumvention system is useful to the extent that it is consistent
+(returns accurate and current data), available (returns data at all), and
+partition-tolerant (routes around failures---which by definition include active
+censorship).  D/DoS attacks against the Tor network diminish its overall
+availability, which lessens its utility in circumventing other censorship
+measures whether or not the attack itself is motivated by or intended as an act
+of censorship.<a href="#section-1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="conventions-and-definitions">
+<div id="sec-informative-references">
 <section id="section-2">
-      <h2 id="name-conventions-and-definitions">
-<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-conventions-and-definitions" class="section-name selfRef">Conventions and Definitions</a>
-      </h2>
-<p id="section-2-1">The key words "<span class="bcp14">MUST</span>", "<span class="bcp14">MUST NOT</span>", "<span class="bcp14">REQUIRED</span>", "<span class="bcp14">SHALL</span>", "<span class="bcp14">SHALL NOT</span>", "<span class="bcp14">SHOULD</span>", "<span class="bcp14">SHOULD NOT</span>", "<span class="bcp14">RECOMMENDED</span>", "<span class="bcp14">NOT RECOMMENDED</span>",
-"<span class="bcp14">MAY</span>", and "<span class="bcp14">OPTIONAL</span>" in this document are to be interpreted as
-described in BCP 14 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="cite xref">RFC8174</a>]</span> when, and only when, they
-appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
-</section>
-</div>
-<div id="security-considerations">
-<section id="section-3">
-      <h2 id="name-security-considerations">
-<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
-      </h2>
-<p id="section-3-1">TODO Security<a href="#section-3-1" class="pilcrow">¶</a></p>
-</section>
-</div>
-<div id="iana-considerations">
-<section id="section-4">
-      <h2 id="name-iana-considerations">
-<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
-      </h2>
-<p id="section-4-1">This document has no IANA actions.<a href="#section-4-1" class="pilcrow">¶</a></p>
-</section>
-</div>
-<div id="sec-normative-references">
-<section id="section-5">
-      <h2 id="name-normative-references">
-<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+      <h2 id="name-informative-references">
+<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
       </h2>
 <dl class="references">
-<dt id="RFC2119">[RFC2119]</dt>
+<dt id="tor-relays-2022-07">[tor-relays-2022-07]</dt>
       <dd>
-<span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
+<span class="refAuthor">Dingledine, R.</span>, <span class="refTitle">"We're trying out guard-n-primary-guards-to-use=2"</span>, <time datetime="2022-07-06" class="refDate">6 July 2022</time>, <span>&lt;<a href="https://lists.torproject.org/pipermail/tor-relays/2022-July/020686.html">https://lists.torproject.org/pipermail/tor-relays/2022-July/020686.html</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="RFC8174">[RFC8174]</dt>
+<dt id="tor-relays-2022-10">[tor-relays-2022-10]</dt>
+      <dd>
+<span class="refAuthor">Koppen, G.</span>, <span class="refTitle">"DoS attacks -- status update"</span>, <time datetime="2022-10-28" class="refDate">28 October 2022</time>, <span>&lt;<a href="https://lists.torproject.org/pipermail/tor-relays/2022-October/020858.html">https://lists.torproject.org/pipermail/tor-relays/2022-October/020858.html</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="tor-status">[tor-status]</dt>
     <dd>
-<span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a>&gt;</span>. </dd>
+<span class="refAuthor">Tor Project</span>, <span class="refTitle">"Network DDoS"</span>, <time datetime="2022-06-09" class="refDate">9 June 2022</time>, <span>&lt;<a href="https://status.torproject.org/issues/2022-06-09-network-ddos/">https://status.torproject.org/issues/2022-06-09-network-ddos/</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
 </div>
-<div id="acknowledgments">
-<section id="appendix-A">
-      <h2 id="name-acknowledgments">
-<a href="#name-acknowledgments" class="section-name selfRef">Acknowledgments</a>
-      </h2>
-<p id="appendix-A-1">TODO acknowledge.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
-</section>
-</div>
 <div id="authors-addresses">
-<section id="appendix-B">
+<section id="appendix-A">
       <h2 id="name-authors-address">
 <a href="#name-authors-address" class="section-name selfRef">Author's Address</a>
       </h2>

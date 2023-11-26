@@ -13,7 +13,7 @@ Expires: 29 May 2024
 
 Abstract
 
-   TODO Abstract
+   TK
 
 Status of This Memo
 
@@ -48,48 +48,53 @@ Copyright Notice
 
 Table of Contents
 
-   1.  Introduction
-   2.  Conventions and Definitions
-   3.  Security Considerations
-   4.  IANA Considerations
-   5.  Normative References
-   Acknowledgments
+   1.  Test
+   2.  Informative References
    Author's Address
 
-1.  Introduction
+1.  Test
 
-   TODO Introduction
+   Between June 2022 and April 2023 [tor-status], the Tor network was
+   the target of a sustained distributed denial-of-service (DDoS)
+   attack, apparently targeting the relays and directory servers that
+   coordinate introductions to Tor hidden services [tor-relays-2022-07]
+   [tor-relays-2022-10].  This attack impeded the performance and
+   threatened the security of the Tor network for all users.  It
+   especially obstructed Web sites and services that had gone out of
+   their way to be accessible to Tor users via Tor hidden services,
+   which usually improve the performance of the Tor network by bypassing
+   the "exit nodes" that interface with the clearnet Internet.
 
-2.  Conventions and Definitions
+   Although the origins and motivations of this attack remain unknown,
+   it is a useful case study in the D/DoS vulnerability of overlay
+   networks such as Tor, which for different users may protect their
+   anonymity, circumvent censorship, or both.  The CAP theorem is
+   instructive: like a database, a censorship-circumvention system is
+   useful to the extent that it is consistent (returns accurate and
+   current data), available (returns data at all), and partition-
+   tolerant (routes around failures---which by definition include active
+   censorship).  D/DoS attacks against the Tor network diminish its
+   overall availability, which lessens its utility in circumventing
+   other censorship measures whether or not the attack itself is
+   motivated by or intended as an act of censorship.
 
-   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
-   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
-   "OPTIONAL" in this document are to be interpreted as described in
-   BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
-   capitals, as shown here.
+2.  Informative References
 
-3.  Security Considerations
+   [tor-relays-2022-07]
+              Dingledine, R., "We're trying out guard-n-primary-guards-
+              to-use=2", 6 July 2022,
+              <https://lists.torproject.org/pipermail/tor-
+              relays/2022-July/020686.html>.
 
-   TODO Security
+   [tor-relays-2022-10]
+              Koppen, G., "DoS attacks -- status update", 28 October
+              2022, <https://lists.torproject.org/pipermail/tor-
+              relays/2022-October/020858.html>.
 
-4.  IANA Considerations
-
-   This document has no IANA actions.
-
-5.  Normative References
-
-   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
-              Requirement Levels", BCP 14, RFC 2119,
-              DOI 10.17487/RFC2119, March 1997,
-              <https://www.rfc-editor.org/rfc/rfc2119>.
-
-   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
-              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
-              May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
-
-Acknowledgments
-
-   TODO acknowledge.
+   [tor-status]
+              Tor Project, "Network DDoS", 9 June 2022,
+              <https://status.torproject.org/issues/2022-06-09-network-
+              ddos/>.
 
 Author's Address
 
