@@ -2,7 +2,7 @@
 title: Towards a CAP Theorem for Censorship Circumvention
 category: info
 
-docname: draft-todo-yourname-protocol-latest
+docname: draft-cfm-circumvention-cap-theorem-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
