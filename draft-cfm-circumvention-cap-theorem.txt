@@ -25,7 +25,7 @@ About This Document
    theorem/.
 
    Source for this draft and an issue tracker can be found at
-   https://github.com/cfm/draft-cfm-circumvention-cap-thorem.
+   https://github.com/cfm/draft-cfm-circumvention-cap-theorem.
 
 Status of This Memo
 
