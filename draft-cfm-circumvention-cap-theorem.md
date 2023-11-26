@@ -10,7 +10,7 @@ v: 3
 venue:
   group: BIAS
   type: Workshop
-  github: cfm/draft-cfm-circumvention-cap-thorem
+  github: cfm/draft-cfm-circumvention-cap-theorem
 
 author:
  - fullname: Cory Myers
