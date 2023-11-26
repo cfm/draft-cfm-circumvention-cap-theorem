@@ -15,6 +15,13 @@ Abstract
 
    TK
 
+Discussion Venues
+
+   This note is to be removed before publishing as an RFC.
+
+   Source for this draft and an issue tracker can be found at
+   https://github.com/cfm/draft-cfm-circumvention-cap-theorem.
+
 Status of This Memo
 
    This Internet-Draft is submitted in full conformance with the
@@ -48,11 +55,11 @@ Copyright Notice
 
 Table of Contents
 
-   1.  Test
+   1.  Executive summary
    2.  Informative References
    Author's Address
 
-1.  Test
+1.  Executive summary
 
    Between June 2022 and April 2023 [tor-status], the Tor network was
    the target of a sustained distributed denial-of-service (DDoS)
