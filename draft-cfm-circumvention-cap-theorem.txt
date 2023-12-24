@@ -4,8 +4,8 @@
 
 Network Working Group                                           C. Myers
 Internet-Draft                                                ARTICLE 19
-Intended status: Informational                          26 November 2023
-Expires: 29 May 2024
+Intended status: Informational                          24 December 2023
+Expires: 26 June 2024
 
 
            Towards a CAP Theorem for Censorship Circumvention
@@ -42,7 +42,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 29 May 2024.
+   This Internet-Draft will expire on 26 June 2024.
 
 Copyright Notice
 
@@ -57,11 +57,11 @@ Copyright Notice
 
 Table of Contents
 
-   1.  Research proposal
+   1.  Research Proposal
    2.  Informative References
    Author's Address
 
-1.  Research proposal
+1.  Research Proposal
 
    Between June 2022 and April 2023 [tor-status], the Tor network was
    the target of a sustained distributed denial-of-service (DDoS)
@@ -91,10 +91,9 @@ Table of Contents
        overall availability, whether or not intended as an act of
        censorship.
 
-   For the workshop, I propose to explore further whether formalisms
-   such as the CAP theorem are useful models and/or measures for the
-   utility and resilience of a censorship-circumvention system such as
-   Tor.
+   For the workshop, I propose to explore further whether concepts such
+   as the CAP theorem are useful models and/or measures for the utility
+   and resilience of a censorship-circumvention system such as Tor.
 
 2.  Informative References
 
