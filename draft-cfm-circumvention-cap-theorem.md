@@ -57,7 +57,7 @@ Access of Services {{biasws}}.
 
 --- middle
 
-# Research proposal
+# Research Proposal
 
 Between June 2022 and April 2023 {{tor-status}}, the Tor network was the target
 of a sustained distributed denial-of-service (DDoS) attack, apparently targeting
