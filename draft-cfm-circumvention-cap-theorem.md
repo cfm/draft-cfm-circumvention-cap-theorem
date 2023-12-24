@@ -84,6 +84,6 @@ censorship-circumvention system is useful to the extent that it is:
    on circumvention infrastructure that lessen its overall availability,
    whether or not intended as an act of censorship.
 
-For the workshop, I propose to explore further whether formalisms such as the
-CAP theorem are useful models and/or measures for the utility and resilience of
+For the workshop, I propose to explore further whether concepts such as the CAP
+theorem are useful models and/or measures for the utility and resilience of
 a censorship-circumvention system such as Tor.
